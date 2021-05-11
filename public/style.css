@@ -29,7 +29,7 @@ body{
     font-family: 'Rajdhani' , monospace;
     font-size: 15px;
     font-weight: 300;
-    letter-spacing: 10px;
+    letter-spacing: 5px;
     margin-top:0px;
     margin-bottom: 20px;
 }
@@ -65,7 +65,7 @@ body{
 }
 
 #left-intro{
-    width : 40%;
+    width : 30%;
     height: 100%;
     margin-top:0px;
     margin-bottom: 20px;
@@ -78,7 +78,7 @@ body{
 }
 
 #right-intro{
-    width : 40%;
+    width : 30%;
     height: 100%;
     margin-top:0px;
     margin-bottom: 20px;
@@ -99,7 +99,8 @@ body{
 }
 
 .paragraph{
-    font-weight: 400 ;
+    position: relative;
+    font-weight: 300 ;
     font-size: 15px;
     margin-top: 10px;
     margin-bottom: 0;
@@ -153,8 +154,8 @@ body{
 
 .contact-container{
     display: flex;
-
 }
+
 
 .contact-image{
     width: 50px;
