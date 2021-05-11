@@ -1,6 +1,12 @@
 @import url('https://fonts.googleapis.com/css2?family=Electrolize&family=Monda:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Rajdhani:wght@300;400;500;600&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,200;1,300;1,400;1,500&family=Rajdhani:wght@300;400;500;600&display=swap');
+:root {
+    --js-score: 60%;
+    --java-score: 80%;
+    --python-score: 50%;
+}
+
 body{
     display: flex;
     flex-direction:column;
@@ -32,6 +38,9 @@ body{
     letter-spacing: 5px;
     margin-top:0px;
     margin-bottom: 20px;
+    margin-left: 0;
+    margin-right:0;
+    text-align: center;
 }
 
 #avatar {
@@ -56,16 +65,16 @@ body{
     border: none;
     background-color: rgba(0,0,0,0.5);
     width: 2px;
-    height:110%;
+    height:700px;
     position: relative;
     margin:0;
     padding:0;
-    margin-top:0px;
+    margin-top:60px;
     margin-bottom: 20px;
 }
 
 #left-intro{
-    width : 30%;
+    width : 400px;
     height: 100%;
     margin-top:0px;
     margin-bottom: 20px;
@@ -78,7 +87,7 @@ body{
 }
 
 #right-intro{
-    width : 30%;
+    width : 400px;
     height: 100%;
     margin-top:0px;
     margin-bottom: 20px;
@@ -133,7 +142,42 @@ body{
     position: relative;
     margin-left: 20px;
 }
-
+@keyframes js-score-animation{
+    from {
+        width: 0;
+    }
+    to{
+        width: var(--js-score);
+    }
+}
+@keyframes java-score-animation{
+    from {
+        width: 0;
+    }
+    to{
+        width: var(--java-score);
+    }
+}
+@keyframes python-score-animation{
+    from {
+        width: 0;
+    }
+    to{
+        width: var(--python-score);
+    }
+}
+#js-skill{
+    animation-name: js-score-animation;
+    width: var(--js-score);
+}
+#java-skill{
+    animation-name: java-score-animation;
+    width: var(--java-score);
+}
+#python-skill{
+    animation-name: python-score-animation;
+    width: var(--python-score);
+}
 .skill-card:hover {
     transform: scale(1.05);
 }
@@ -142,6 +186,7 @@ body{
     height:100%;
     background-color: rgba(0,0,0,0.5);
     position: absolute;
+    animation-duration: 5s;
 }
 
 .unscore{
